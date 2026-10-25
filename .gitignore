@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+
+# ML
+ml/splits/
+ml/*.pkl
+ml/*.npy
+scraper/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# JS/Frontend
+frontend/node_modules/
+frontend/dist/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
