@@ -124,8 +124,6 @@ def predict(match: MatchPredictRequest, request: Request):
     ranked = sorted(zip(names, contributions), key=lambda t: abs(t[1]), reverse=True)
     top_names, top_values = zip(*ranked[:5])
 
-    print(top_names, top_values)
-
     return MatchPredictResponse(
         team1_win_prob=prob,
         team2_win_prob=1 - prob,
@@ -145,8 +143,3 @@ def get_team_id_by_tag(tag: str, teams):
 
 def get_player_ids_by_igns(igns: List[str], players):
     return [p.player_id for p in players.players if p.player_ign in igns]
-
-
-"""
-uvicorn backend:app --reload
-"""
